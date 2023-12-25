@@ -68,12 +68,15 @@ const RecentProducts = () => {
             <div className="flex">
                 <div className='overflow-x-auto no-scrollbar'>
                     <div className='flex space-x-4 w-max'>
-                        <ProductCard tag={"12%"} imageSrc={tripodImg} productName={"Sunmory Wood Tripod La..."} price={"6999"} oldPrice={"7999"} />
-                        <ProductCard tag={"6%"} imageSrc={staplerImg} productName={"FUJI Stapler HD-10N"} price={"1730"} oldPrice={"1050"} />
+                        {data.map((items)=>{
+                            return <ProductCard key={items._id} {...items} />
+                        })}
+                        {/* <ProductCard tag={"12%"} imageSrc={tripodImg} productName={"Sunmory Wood Tripod La..."} price={"6999"} oldPrice={"7999"} /> */}
+                        {/* <ProductCard tag={"6%"} imageSrc={staplerImg} productName={"FUJI Stapler HD-10N"} price={"1730"} oldPrice={"1050"} />
                         <ProductCard tag={"17%"} imageSrc={glueImg} productName={"Dollar Glue Stick 35g"} price={"1430"} oldPrice={"1500"} />
                         <ProductCard tag={"27%"} imageSrc={inkImg} productName={"Dollar Blue Fountain Pen In..."} price={"290"} oldPrice={"399"} />
                         <ProductCard tag={"4%"} imageSrc={uhuImg} productName={"UHU Tube No.11 12ml"} price={"1430"} oldPrice={"1500"} />
-                        <ProductCard tag={"18%"} imageSrc={lampImg} productName={"Santner Wooden Floor Lamp"} price={"5399"} oldPrice={"6599"} />
+                        <ProductCard tag={"18%"} imageSrc={lampImg} productName={"Santner Wooden Floor Lamp"} price={"5399"} oldPrice={"6599"} /> */}
                     </div>
                 </div>
             </div>
